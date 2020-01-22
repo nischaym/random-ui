@@ -64,6 +64,9 @@ class App extends React.Component {
   }
 
   handleSort = (sortKey) => {
+
+    if(!this.state.apiData)
+      return
     // eslint-disable-next-line default-case
     switch(sortKey) {
       case 'low':

@@ -20,7 +20,14 @@ export default class Header extends React.Component {
                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={this.handleClick}>
                         <span className={`walmart-header-${this.state.clicked? 'close': 'collapse'}-logo`}/>
                     </button>
-                    <a className="nav-link walmart-hide-desktop" href="#"><span className='walmart-header-basket-logo'/><span className='walmart-header-number-icon ml-1'>{state.apiData && state.apiData.cart.quantity}</span></a>
+                    <a className="nav-link walmart-hide-desktop" href="#"><
+                        span className='walmart-header-basket-logo'/>
+                        {   state.apiData &&
+                            <span className='walmart-header-number-icon ml-1'>
+                                {state.apiData.cart.quantity}
+                            </span>
+                        }
+                    </a>
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav ml-auto">
@@ -37,7 +44,14 @@ export default class Header extends React.Component {
                                 <a className="nav-link" href="#">Health</a>
                             </li>
                             <li className="nav-item active">
-                                <a className="nav-link" href="#"><span className='walmart-header-basket-logo'/><span className='walmart-header-number-icon ml-1'>{state.apiData && state.apiData.cart.quantity}</span></a>
+                                <a className="nav-link" href="#">
+                                    <span className='walmart-header-basket-logo'/>
+                                    {   state.apiData &&
+                                        <span className='walmart-header-number-icon ml-1'>
+                                            {state.apiData.cart.quantity}
+                                        </span>
+                                    }
+                                </a>
                             </li>
                         </ul>
                     </div>

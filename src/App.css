@@ -345,6 +345,9 @@ h2 {
   {
     font-size: x-small;
   }
+  .walmart-hide-mobile {
+    display: none;
+  }
 
 }
 
